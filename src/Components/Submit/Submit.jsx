@@ -1,30 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.css'
+import Input from '../Input/Input'
 const Submit = () => {
+  const [engWord, setEngWord] = useState('')
+  const [engTrans, setEngTrans] = useState('')
+  const [engText, setEngText] = useState('')
+  function handlersSubmit(e) {
+    e.preventDefault()
+  }
   return (
     <>
-          <div className='container'>
-      <div className='form'>
-        <h3>Enter latter</h3>
-        <input
-          type='text'
-          className='form-control'
-          placeholder='Enter the word'
-          required
-        />
-        <input
-          type='text'
-          className='form-control'
-          placeholder='Enter the translation'
-          required
-        />
-        <button
-          type=' submit'
-          className='btn bg-info text-light  btn-rounded mt-3 w-100 py-3 px-3'
-        >
-          Submit
-        </button>
-      </div>
+      <div className='containerW'>
+        <form className='form' onSubmit={handlersSubmit}>
+          <h3>Enter latter</h3>
+          <Input
+            type={'text'}
+            clas={'form-control'}
+            desc={'Enter the word'}
+            val={engWord}
+            setValue={setEngWord}
+          />
+          <Input
+            type={'text'}
+            clas={'form-control'}
+            val={engTrans}
+            setValue={setEngTrans}
+            desc={'Enter the translation'}
+          />
+          <Input
+            type={'text'}
+            val={engText}
+            setValue={setEngText}
+            clas={'form-control'}
+            desc={"Eslatma so'z kiritib qo'ying"}
+          />
+          <button
+            type=' submit'
+            className='btn bg-info text-light  btn-rounded mt-3 w-100 py-3 px-3'
+          >
+            Submit
+          </button>
+        </form>
       </div>
     </>
   )
