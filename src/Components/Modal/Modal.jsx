@@ -1,16 +1,41 @@
-import React,{useContext} from 'react'
+import React, { useContext } from 'react'
 import './style.css'
 
 import context from '../../context/context'
 const Modal = () => {
-  const {setModal}=useContext(context)
+  const { setModal } = useContext(context)
+  let wordData = JSON.parse(localStorage.getItem('words'))
+  console.clear()
+// for (const iterator of wordData) {
+//   console.log(iterator);
+// }
+  function* show() {
+    let answer
+    for (let iterator of wordData) {
+      console.log(iterator.translate);
+      // console.log(yield iterator.translate);
+      answer = yield iterator.translate
+      console.log(answer == iterator.name);
+    }
+    return answer
+  }
+  let generator = show();
+
+  let javob = ''
+  for (const key in wordData) {
+    javob = prompt(generator.next("javob").value)
+  }
+  generator.next("javob")
   return (
     <>
-      <div class='modals '>
+      <div className='modals '>
         <div className='removeModal'>
-          <i class='bi bi-x-circle' onClick={() => {
-            setModal(false)
-          }}></i>
+          <i
+            className='bi bi-x-circle'
+            onClick={() => {
+              setModal(false)
+            }}
+          ></i>
         </div>
         <div className='form'>
           <h3 className='h3'>Qiyoslangan so'zni o'ylang.</h3>
