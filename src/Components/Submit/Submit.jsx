@@ -1,12 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './style.css'
 import Input from '../Input/Input'
+import context from '../../context/context'
 const Submit = () => {
+  const {addWord} = useContext(context)
   const [engWord, setEngWord] = useState('')
   const [engTrans, setEngTrans] = useState('')
   const [engText, setEngText] = useState('')
   function handlersSubmit(e) {
     e.preventDefault()
+    let stateValue = {
+      name: engWord,
+      translate: engTrans,
+      remember: engText,
+    }
+    addWord(stateValue)
   }
   return (
     <>
