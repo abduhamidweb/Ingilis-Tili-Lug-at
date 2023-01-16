@@ -1,26 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './style.scss'
 import Books from '../../Components/Books/Books'
 import { useParams } from 'react-router-dom'
+import context from '../../context/context'
 const Home = () => {
-
-  let Book = [
-    { title: 'Essential', id: 1 },
-    { title: 'Essential', id: 2 },
-    { title: 'Essential', id: 3 },
-    { title: 'Essential', id: 4 },
-    { title: 'Essential', id: 5 },
-    { title: 'Essential', id: 6 },
-  ]
+  const { bookData } = useContext(context);
+  let dataBookUnit = bookData.map((item) => {
+      return item
+  }).flat()
+  
   return (
     <>
       <div className='head__line__title'>
         <div className='units'>
           <ul className='essential'>
-            {Book.map((item, key, index) => {
+            {dataBookUnit.map((item, arr, index) => {
               return (
-                <li key={item.id}>
-                  <Books title={item} index={key + 1} />
+                <li key={arr}>
+                  <Books title={item.title} link={item.essential} />
                 </li>
               )
             })}

@@ -87,3 +87,167 @@ export default Submit
           }
         })}
       </div>
+
+
+
+
+      import React, { useContext } from 'react'
+import './style.scss'
+import Books from '../../Components/Books/Books'
+import { useParams } from 'react-router-dom'
+import context from '../../context/context'
+const Home = () => {
+  const { bookData } = useContext(context)
+  return (
+    <>
+      <div className='head__line__title'>
+        <div className='units'>
+          <ul className='essential'>
+            {bookData.map((item, arr, index) => {
+              return (
+                <li key={arr}>
+                  <Books title={item.title} link={item.essential1} />
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default Home
+
+
+
+
+
+
+[
+  {
+    "essential1": "essential1",
+    "title": "essential 1",
+
+    "data": [
+      {
+        "title": "unit1",
+        "description": "UNIT 1",
+        "unit1": [
+          {
+            "words": [
+              {
+                "word": [
+                  {
+                    "name": "afraid",
+                    "translation": "qo'rgan, cho'chigan",
+                    "description": "afraid so'ziga yaqin"
+                  }
+                ]
+              },
+              {
+                "word": [
+                  {
+                    "name": "agree",
+                    "translation": "fikirga qo'shilmoq, rozi bo'lmoq",
+                    "description": "agree so'ziga yaqing"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "unit2",
+        "description": "UNIT 2",
+        "unit2": [
+          {
+            "words": [
+              {
+                "word": [
+                  {
+                    "name": "adventure",
+                    "translation": "sarguzasht",
+                    "description": "yuqori daraja advenstga o'xshash"
+                  }
+                ]
+              },
+              {
+                "word": [
+                  {
+                    "name": "approach",
+                    "translation": "yaqinlashmoq,yaqin kelmoq",
+                    "description": "approach ga o'xshaydi"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+    {
+      "essential1": "essential2",
+      "title": "essential 2",
+      "data": [
+        {
+          "title": "unit1",
+          "description": "UNIT 1",
+          "unit1": [
+            {
+              "words": [
+                {
+                  "word": [
+                    {
+                      "name": "afraid",
+                      "translation": "qo'rgan, cho'chigan",
+                      "description": "afraid so'ziga yaqin"
+                    }
+                  ]
+                },
+                {
+                  "word": [
+                    {
+                      "name": "agree",
+                      "translation": "fikirga qo'shilmoq, rozi bo'lmoq",
+                      "description": "agree so'ziga yaqing"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "unit2",
+          "description": "UNIT 2",
+          "unit2": [
+            {
+              "words": [
+                {
+                  "word": [
+                    {
+                      "name": "adventure",
+                      "translation": "sarguzasht",
+                      "description": "yuqori daraja advenstga o'xshash"
+                    }
+                  ]
+                },
+                {
+                  "word": [
+                    {
+                      "name": "approach",
+                      "translation": "yaqinlashmoq,yaqin kelmoq",
+                      "description": "approach ga o'xshaydi"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+]
