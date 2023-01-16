@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 const Navbar = () => {
   return (
     <>
-      <nav className='navbar navbar-expand-lg bg-body-tertiary'>
+      <nav className='navbar navbar-expand-lg bg-body-tertiary shadow-none'>
         <div className='container'>
           <Link className='navbar-brand' to={'/'}>
             English
@@ -26,7 +26,7 @@ const Navbar = () => {
                 <NavLink
                   className='nav-link '
                   aria-current='page'
-                  to={'/'}
+                  to={'/submit'}
                 >
                   Submit the word
                 </NavLink>

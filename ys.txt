@@ -77,3 +77,13 @@ const Submit = () => {
 }
 
 export default Submit
+
+
+
+      <div className='units__wrapper '>
+        {bookData.map((item) => {
+          if (item.essential1.toLowerCase() === id.toLowerCase()) {
+         return   <Unit />
+          }
+        })}
+      </div>

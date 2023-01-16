@@ -1,0 +1,63 @@
+[
+  {
+    "essential1": "essential1",
+    "data": [
+      {
+        "title": "unit1",
+        "description": "UNIT 1",
+        "unit1": [
+          {
+            "words": [
+              {
+                "word": [
+                  {
+                    "name": "afraid",
+                    "translation": "qo'rgan, cho'chigan",
+                    "description": "afraid so'ziga yaqin"
+                  }
+                ]
+              },
+              {
+                "word": [
+                  {
+                    "name": "agree",
+                    "translation": "fikirga qo'shilmoq, rozi bo'lmoq",
+                    "description": "agree so'ziga yaqing"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "unit2",
+        "description": "UNIT 2",
+        "unit2": [
+          {
+            "words": [
+              {
+                "word": [
+                  {
+                    "name": "adventure",
+                    "translation": "sarguzasht",
+                    "description": "yuqori daraja advenstga o'xshash"
+                  }
+                ]
+              },
+              {
+                "word": [
+                  {
+                    "name": "approach",
+                    "translation": "yaqinlashmoq,yaqin kelmoq",
+                    "description": "approach ga o'xshaydi"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
